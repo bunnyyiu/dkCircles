@@ -23,7 +23,11 @@
 (function() {
   var Circles = window.Circles = function(options) {
     var elId = options.id;
-    this._el = document.getElementById(elId);
+    if (elId) {
+      this._el = document.getElementById(elId);
+    } else {
+      this._el = options.element ? options.element : null;
+    }
     
     if (this._el === null) return;
     

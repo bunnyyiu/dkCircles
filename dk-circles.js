@@ -13,7 +13,7 @@
         
         var circleIt = function() {
           Circles.create({
-            id:         attrs.id,
+            element:    element,
             percentage: parseFloat(attrs.circPercentage).toFixed(2),
             radius:     parseInt(attrs.circRadius, 10) || 50,
             width:      parseInt(attrs.circWidth, 10) || 10,
