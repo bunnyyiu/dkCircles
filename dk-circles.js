@@ -13,7 +13,8 @@
         
         var circleIt = function() {
           Circles.create({
-            element:    element,
+            // element is always wrapped with jQuery or jqLite.
+            element:    element[0],
             percentage: parseFloat(attrs.circPercentage).toFixed(2),
             radius:     parseInt(attrs.circRadius, 10) || 50,
             width:      parseInt(attrs.circWidth, 10) || 10,
